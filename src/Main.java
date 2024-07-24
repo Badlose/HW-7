@@ -5,8 +5,9 @@ public class Main {
         int salary = 15_000;
         int totalAmount = 0;
         int month = 0;
+        int desiredAmount = 2_459_000;
 
-        while (totalAmount <= 2_459_000) {
+        while (totalAmount <= desiredAmount) {
             totalAmount += totalAmount / 100;
             totalAmount += salary;
             month++;
@@ -50,9 +51,12 @@ public class Main {
         int salaryVasiliy = 15_000;
         int totalVasiliy = 0;
         int monthVasiliy = 0;
+        int vasiliyWish = 12_000_000;
+        int ratePerMonth = 7;
+        //int interestPerMonth = totalVasiliy / 100 * 7;
 
-        while (totalVasiliy < 12_000_000) {
-            totalVasiliy += (totalVasiliy / 100) * 7;
+        while (totalVasiliy < vasiliyWish) {
+            totalVasiliy += (totalVasiliy / 100) * ratePerMonth;
             totalVasiliy += salaryVasiliy;
             monthVasiliy ++;
 
@@ -62,17 +66,19 @@ public class Main {
 
         //Task 5
         System.out.println("Task 5");
-        int salaryVasiliy2 = 15_000;
-        int totalVasiliy2 = 0;
-        int monthVasiliy2 = 0;
+        salaryVasiliy = 15_000;
+        totalVasiliy = 0;
+        monthVasiliy = 0;
+        vasiliyWish = 12_000_000;
+        ratePerMonth = 7;
 
-        while (totalVasiliy2 < 12_000_000) {
-            totalVasiliy2 += (totalVasiliy2 / 100) * 7;
-            totalVasiliy2 += salaryVasiliy2;
-            monthVasiliy2 ++;
+        while (totalVasiliy < vasiliyWish) {
+            totalVasiliy += (totalVasiliy / 100) * ratePerMonth;
+            totalVasiliy += salaryVasiliy;
+            monthVasiliy ++;
 
-            if (monthVasiliy2 % 6 == 0) {
-                System.out.println("Месяц " + monthVasiliy2 + ", сумма накоплений Василия равна " + totalVasiliy2 + " рублей");
+            if (monthVasiliy % 6 == 0) {
+                System.out.println("Месяц " + monthVasiliy + ", сумма накоплений Василия равна " + totalVasiliy + " рублей");
             }
         }
         /*
@@ -82,17 +88,20 @@ public class Main {
 
         //Task 6
         System.out.println("Task 6");
-        int salaryVasiliy3 = 15_000;
-        int totalVasiliy3 = 0;
-        int monthVasiliy3 = 0;
+        salaryVasiliy = 15_000;
+        totalVasiliy = 0;
+        monthVasiliy = 0;
+        vasiliyWish = 12_000_000;
+        ratePerMonth = 7;
+        int numberOfMonths = 108;
 
-        while (monthVasiliy3 <= 9 * 12) {
-            totalVasiliy3 += (totalVasiliy3 / 100) * 7;
-            totalVasiliy3 += salaryVasiliy3;
-            monthVasiliy3 ++;
+        while (monthVasiliy <= numberOfMonths) {
+            totalVasiliy += (totalVasiliy / 100) * ratePerMonth;
+            totalVasiliy += salaryVasiliy;
+            monthVasiliy ++;
 
-            if (monthVasiliy3 % 6 == 0) {
-                System.out.println("Месяц " + monthVasiliy3 + ", сумма накоплений Василия равна " + totalVasiliy3 + " рублей");
+            if (monthVasiliy % 6 == 0) {
+                System.out.println("Месяц " + monthVasiliy + ", сумма накоплений Василия равна " + totalVasiliy + " рублей");
             }
         }
 
@@ -101,7 +110,7 @@ public class Main {
         int friday = 3;
         int daysPerMonth = 31;
 
-        while (friday < daysPerMonth) {
+        while (friday <= daysPerMonth) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
             friday += 7;
         }
@@ -110,8 +119,8 @@ public class Main {
         System.out.println("Task 8");
         int cometArrival = 79;
         int currentYear = 0;
-        int yearMinus200 = 2024 - 200;
-        int yearPlus100 = 2024 + 100;
+        int yearMinus200 = 1824;
+        int yearPlus100 = 2124;
 
         while (currentYear <= yearPlus100) {
             currentYear += cometArrival;
